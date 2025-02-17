@@ -46,6 +46,6 @@ def test_power():
     assert power(5, 2) == 25
 
 def test_prime():
-    assert prime(7)
-    assert not prime(6)
+    assert prime(11)
+    assert not prime(10)
 
