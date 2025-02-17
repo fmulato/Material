@@ -15,7 +15,7 @@ Overall, these tests ensure that the calculator functions perform as expected an
 
 """
 import pytest
-from calculator import add, subtract, multiply, divide
+from calculator import add, subtract, multiply, divide, factorial, power, prime
 
 def test_add():
     assert add(2, 3) == 5 # expected result
@@ -32,3 +32,20 @@ def test_divide():
 def test_divide_by_zero():
     with pytest.raises(ValueError, match="Cannot divide by zero"):
         divide(10, 0)  # expected result
+
+def test_factorial():
+    assert factorial(5) == 120 # expected result
+
+def test_power():
+    assert power(5, 2) == 25 # expected result
+
+def test_factorial():
+    assert factorial(5) == 120
+
+def test_power():
+    assert power(5, 2) == 25
+
+def test_prime():
+    assert prime(7)
+    assert not prime(6)
+

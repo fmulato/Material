@@ -19,3 +19,30 @@ def divide(a, b):
     if b == 0:
         raise ValueError("Cannot divide by zero")
     return a / b
+
+def factorial(a):
+    if a < 0:
+        raise ValueError("Factorial is not defined for negative numbers")
+    result = 1
+    for i in range(1, a + 1):
+        result *= i
+    return result # expected result
+
+def power(a, b):
+    return a ** b
+
+def prime(a):
+    if a <= 1:
+        return False
+    for i in range(2, int(a**0.5) + 1):
+        if a % i == 0:
+            return False
+    return True
+
+def input_number():
+    entry = input("Enter one or two numbers separated by a space:")
+    if len(entry.split()) == 1:
+        return int(entry)
+    else:
+        return list(map(int, entry.split()))
+
