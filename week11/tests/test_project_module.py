@@ -1,4 +1,5 @@
-"""hat This Code Does:
+"""
+What This Code Does:
 1. Imports pytest to run automated tests.
 2. Defines a simple test (test_something) that checks if my_data is equal to 42.
 3. Uses @pytest.mark.parametrize to test the rolling_average function with multiple input cases.
