@@ -42,9 +42,6 @@ def test_power():
 def test_factorial():
     assert factorial(5) == 120
 
-def test_power():
-    assert power(5, 2) == 25
-
 def test_prime():
     assert prime(11)
     assert not prime(10)
