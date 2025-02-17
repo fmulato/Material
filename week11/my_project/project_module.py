@@ -3,10 +3,7 @@ from typing import List
 
 def rolling_average(values: List, period:int)-> List:
     """
-    Calculate rolling average
-    :param values:
-    :param period:
-    :return:
+    Calculate rolling average, for a given period
     """
     rolling_averages = []
     

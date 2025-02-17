@@ -13,7 +13,7 @@ import pytest
 from my_project import project_module
 
 def test_something(my_data):
-    assert my_data == 42
+    assert my_data == 41
 
 @pytest.mark.parametrize("values,expected_results",[
     (
