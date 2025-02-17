@@ -1,4 +1,3 @@
-
 from typing import List
 
 def rolling_average(values: List, period:int)-> List:
