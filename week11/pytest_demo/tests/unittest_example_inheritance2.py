@@ -22,7 +22,7 @@ class Calculator(DataInput):
         elif operation == "mult":
             result = self.a * self.b
         else:
-            result = None  # Adicionado para evitar erro se a operação for inválida
+            result = None  # Avoide error if operation is unknown
 
         if result is not None:
             print(f"Calculating {self.operation_name(operation)}: {self.a} {'+' if operation == 'add' else '*'} {self.b} = {result}")
@@ -46,7 +46,7 @@ class AdvancedCalculator(DataInput):
 
 
 if __name__ == '__main__':
-    # Solicita os números UMA ÚNICA VEZ
+
     calc = Calculator()
     calc.calculate("add")
     calc.calculate("mult")
