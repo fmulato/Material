@@ -14,8 +14,8 @@ def contact():
 def logo():
     return render_template('logo.html')
 
-@app.route('/username/<name>')
-def learn(name):
+@app.route('/username/<name>/<age>')
+def learn(name, age):
     #return f"{name} is learning Flask"
     return f"""
     <!DOCTYPE html>
@@ -36,6 +36,7 @@ def learn(name):
     <body>
         <h1>Welcome to Flask Learning!</h1>
         <p><strong>{name}</strong> is learning Flask.</p>
+        <p>He/She is <strong>{age}</strong> years old.</p>
         <button onclick="window.location.href='/'">Return to Home Page</button>
     </body>
     </html>
@@ -43,10 +44,13 @@ def learn(name):
 
 @app.route('/submit', methods=['POST'])
 def submit():
-    name = request.form.get('name','age')
-    if name:
-        return redirect(url_for('learn', name=name))
-    return "Name is required!", 400
+    name = request.form.get('name')
+    age = request.form.get('age')
+
+    if name and age:
+        return redirect(url_for('learn', name=name, age=age))
+
+    return "Name and Age are required!", 400
 
 @app.route('/<name>/<int:number>')
 def learn_waketime(name, number):
