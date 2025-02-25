@@ -2,7 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="/static/style.css"/>
     <title>Flask Web App</title>
+
 </head>
 <body align="center">
     <h1>Welcome to Flask!</h1>
@@ -12,13 +14,14 @@
     <button id="alertBtn3">Contact</button>
 
     <p></p><img src="/static/images/yoobee.png" alt="Logo"></p>
-
+    <hr/>
+    <br><br>
     <form action="/submit" method="POST">
         <label for="name">Enter your name:</label>
-        <input type="text" id="name" name="name" required>
+        <input type="text" id="name" name="name" style="text-align: left">
 
         <label for="age">Enter your age:</label>
-        <input type="text" id="age" name="age" required>
+        <input type="text" id="age" name="age" style="color: red">
 
         <button type="submit">Submit</button>
     </form>

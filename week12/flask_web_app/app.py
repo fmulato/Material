@@ -37,6 +37,7 @@ def learn(name, age):
         <h1>Welcome to Flask Learning!</h1>
         <p><strong>{name}</strong> is learning Flask.</p>
         <p>He/She is <strong>{age}</strong> years old.</p>
+        <hr/>
         <button onclick="window.location.href='/'">Return to Home Page</button>
     </body>
     </html>
@@ -76,5 +77,11 @@ def learn_waketime(name, number):
     </body>
     </html>"""
 
+def make_bold(f):
+    def wrapped():
+        return "<b>" + f() + "</b>"
+    return wrapped
+
 if __name__ == '__main__':
     app.run(debug=True)
+    #app.run()
