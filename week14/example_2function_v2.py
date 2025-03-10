@@ -8,7 +8,6 @@ def sum(a,b):
     print(result2)
 
 
-sum(4,2)
+sum(2,3)
 
-# result: 11
-# (2*3) + 2 + 3 = 11
+# result: 6 and 5
